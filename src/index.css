@@ -1,0 +1,241 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(15, 9, 9, 0.87);
+  background-color: #eeeeee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  padding: 0em 2em;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.Header-children{
+  display: flex;
+  justify-content: space-around;
+}
+.question-holder{
+  display: flex;
+  gap: 3em;
+}
+.question-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.proposals{
+  display: flex;
+  gap: 1em;
+}
+button{
+  font-size: 1rem;
+}
+.code-text-right, .code-text-wrong{
+  font-family: monospace;
+  cursor: pointer;
+  background-color: aliceblue;
+  padding: 1em;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  filter: drop-shadow(1px 1px 1px brown);
+}
+.code-text-right:disabled, .code-text-wrong:disabled{
+  cursor: not-allowed;
+  background-color: aliceblue;
+}
+.code-text-right:disabled:hover, .code-text-wrong:disabled:hover{
+  cursor: not-allowed;
+  background-color: aliceblue;
+  filter: drop-shadow(1px 1px 1px brown);
+}
+
+.right, .right-2, .right-3, .sorry,
+.sorry-2, .sorry-3{
+  cursor: pointer;
+  padding: 1em;
+  outline: none;
+  background-color: aliceblue;
+  filter: drop-shadow(1px 1px 1px brown);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.Reset-holder{
+  display: flex;
+  justify-content: center;
+}
+#Reset{
+  cursor: pointer;
+  padding: 1em;
+  outline: none;
+  background-color: rgba(240, 248, 255, 0.89);
+  color: brown;
+  box-shadow: 0px 0px 5px rgb(120, 2, 218);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+#Reset:hover{
+  background-color: rgba(165, 42, 42, 0.692);
+  color: aliceblue;
+}
+
+#first-container{
+  background-color: red;
+}
+.input-holder{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+#name{
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.514);
+  padding: 0.2em;
+  text-align: center;
+}
+#subbut{
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: aliceblue;
+  padding: 0.5em;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+#subbut:hover{
+  background-color: blueviolet;
+  color: aliceblue;
+}
+.right:disabled, .right-2:disabled, .right-3:disabled, .sorry:disabled,
+.sorry-2:disabled, .sorry-3:disabled{
+cursor: not-allowed;
+}
+.right:disabled:hover, .right-2:disabled:hover, .right-3:disabled:hover, .sorry:disabled:hover,
+.sorry-2:disabled:hover, .sorry-3:disabled:hover{
+  cursor: not-allowed;
+}
+.divider-holder{
+  display: flex;
+  align-items: center;
+}
+.divider{
+  height: 92px;
+  width: 2px;
+  background-color: red;
+}
+.answer-holder{
+  display: flex;
+  justify-content: center;
+  animation: fadein 0.4s forwards linear;
+}
+.Answer-right{
+  font-size: 1.2rem;
+  color: green;
+}
+.Answer-wrong{
+  font-size: 1.2rem;
+  color: red;
+}
+@keyframes fadein {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Filters{
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+#search{
+  outline: none;
+  padding: 0.5em;
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.wraper{
+  display: flex;
+}
+.play{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-self: center;
+}
+
+#colorPicker{
+  outline: none;
+  border: 1px solid aliceblue;
+  padding: 0.5em;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.Items{
+  border-collapse: collapse;
+  margin-top: 2em;
+}
+.Items thead th {
+  font-size: 1.2rem;
+  padding: 1em;
+  border: 1px solid black;
+}
+.Items tbody td {
+  font-size: 1.2rem;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 1150px) {
+  .question-holder{
+    flex-direction: column;
+    gap: 0.1em;
+  }
+  .divider-holder{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -4em;
+  }
+  .divider{
+    transform: rotate(90deg);
+  }
+
+}
+
+@media screen and (max-width: 486px) {
+  .Header-children{
+    flex-direction: column;
+    align-items: center;
+  }
+  .question-holder{
+    flex-direction: column;
+    gap: 0.1em;
+  }
+  .divider-holder{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -4em;
+  }
+  .divider{
+    transform: rotate(90deg);
+  }
+  #special{
+    flex-wrap: wrap;
+  }
+  .wraper{
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+}
